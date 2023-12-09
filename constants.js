@@ -1,5 +1,5 @@
 export const fruitsList = [
-    'banana',
+    'Banana',
     'banana2',
     'mango',
     'apple',
@@ -9,3 +9,4 @@ export const fruitsList = [
     'graphs',
 ];
 
+export const USER_URI = 'https://api.github.com/users/myselfmuzammil';

@@ -1,0 +1,10 @@
+.profile_cart {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.profile_img {
+    width: 200px;
+    object-fit: contain;
+}

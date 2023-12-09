@@ -1,16 +1,20 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 
+import Parent from './ClassComponents'
 import { fruitsList } from './constants';
 
 import "./global.css";
 
-
-
 function Navbar() {
     const [searchFruit, setSearchFruit] = useState("");
     const [fruits, setFruits] = useState(fruitsList);
+    const [count, setCount] = useState(0);
 
+    useEffect(()=>{
+        console.log('useEffect')
+    },[])
+    console.log('render')
     return React.createElement('nav',{
             style: { backgroundColor: 'green' }
         }, 
@@ -26,10 +30,10 @@ function Navbar() {
 
         // don't use index as a key
         fruits.map((fruit, key)=> (
-            fruit.startsWith(searchFruit.toLocaleLowerCase()) &&
+            fruit.toLocaleLowerCase().startsWith(searchFruit.toLocaleLowerCase()) &&
             React.createElement('li', { key }, fruit)
-        )
-    ));
+        )),
+    );
 }
 
 function Header() {
@@ -46,6 +50,6 @@ function App() {
     );
 }
 
-// this root var come from html 
+// this root var come from html  
 ReactDOM.createRoot(root).
 render(React.createElement(App));
