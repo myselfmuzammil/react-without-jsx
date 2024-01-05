@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import {USER_URI} from './constants'
+import { Component } from 'react'
+import {USER_URI} from '../constants'
 
 /**
  * React
@@ -47,7 +47,7 @@ import {USER_URI} from './constants'
  * 
  */
 
-export default class Profile extends Component {
+export class Profile extends Component {
     constructor(props){
         super(props);
         console.log('constructor')
@@ -88,3 +88,4 @@ export default class Profile extends Component {
     }
 }
 
+export default Profile;
